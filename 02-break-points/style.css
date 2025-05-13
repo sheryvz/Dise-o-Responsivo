@@ -1,0 +1,116 @@
+/* 
+
+Break points
+
+Valores específicos del ancho de pantalla, donde cambia el diseño del sitio web para adaptarse mejor a las dimensiones del dispositivo.
+
+Ayudan a definir los estilos mediante los media queries. Tradicionalmente se definen sgún categorías comunes de los dispositivos.
+
+Basandonos en los dipositivos: 
+* moviles pequeños: 320px a 479px
+* moviles: 480px a 767px 
+* tablets: 768px a 1023px 
+* escritorio:1024px a 1279px
+* pantalla grande: 1280px a superiores
+
+Es necesario solo usar los break points necesarios generalmente de 3 a 5 para mantener el codigo manejable.
+
+Los media queries se recomiendan escribirlos al final del código css base.
+
+Mettodologia de diseño responsivo:
+1. Mobil first 
+    primero establecemos los estilos para los moviles como base y se usan los media queries con min-width para ir ampliando funcionalidades.
+
+2. Desktop first
+    primero establecemos los estilos para escritorio o panmtallas grandes y se usan los media queries con max width y vamos reduciendo el tamaño de pantalla para ajustar las funcionalidades.
+
+
+
+*/
+
+/* mobile first */
+
+/* estilos base para mobil pequeño */
+
+
+
+body {
+    background-color: coral;
+}
+
+/* mobil mediano */
+
+@media screen and (min-width: 480px) {
+    body {
+    background-color: blue;
+}
+}
+
+/* tablets */
+
+@media screen and (min-width: 768px) {
+    body {
+    background-color: darkgrey;
+}
+}
+
+/* Escritorio */
+
+@media screen and (min-width: 1024px) {
+    body {
+    background-color: white;
+}
+}
+
+/* pantallas grandes */
+
+@media screen and (min-width: 1280px) {
+    body {
+    background-color: orchid;
+}
+}
+
+/* desktop first */
+
+/* estilos base de pantallas grandes y superiores */
+
+h1 {
+    font-size: 5rem;
+    color: black;
+}
+
+/* escritorio con max width */
+
+@media screen and (max-width: 1279px) {
+   h1 {
+    font-size: 4rem;
+    color: rgb(214, 0, 214);
+}
+}
+
+/* tablets */
+
+@media screen and (max-width: 1023px) {
+   h1 {
+    font-size: 8rem;
+    color: rgb(168, 0, 104);
+}
+}
+
+/* mobiles medianos */
+
+@media screen and (max-width: 767px) {
+   h1 {
+    font-size: 2rem;
+    color: rgb(90, 19, 7);
+}
+}
+
+/* mobiles pequeños */
+
+@media screen and (max-width: 479px) {
+   h1 {
+    font-size: 3rem;
+    color: rgb(130, 33, 155);
+}
+}
