@@ -1,0 +1,80 @@
+/* 
+
+  Media Queries
+
+  Permiten aplicar estilos CSS especificos de acuerdo a las caracteristicas del dispositivo.
+  Utilizan la regla de @media para condicionar la aplicacion de estos estilos y sigue la siguiente sintaxis.
+    @media media-type conector (media-feature-rule) {Reglas de CSs que se van a aplicar cuando se cumplan estas condiciones.}
+
+
+Media Type
+
+* screed -> Pantallas de computadora, tablets o móviles
+* speech -> Sintetizador de voz.
+* print -> Para documentos impresos. Imprimir la web.
+* all -> Todos los dispositivos. Valor por defecto.
+
+
+Conectors
+
+* and -> y -> se coloca entre el meia type y el media feature.
+* or -> o -> Se usa una coma para separar media features.
+* not -> negación -> se usa antes de media type.
+
+
+Media features (caracteristicas del medio)
+
+* width -> Ancho
+* heigth -> Alto
+* min-width/ max-width -> Ancho min. y max.
+* min-heigth/ max-heigth _> Atura min. y max.
+* orientation -> orientación del dispositivo: portrait o landscape.
+* resolution -> densidad de px.
+* color -> bits por color.
+
+
+*/
+
+/* Estilo inicial */
+
+body {
+    background-color: rgb(255, 255, 255);
+}
+
+h1 {
+    font-family: sans-serif;
+    font-size: 3rem;
+}
+
+@media screen and (max-width: 1024px) {
+    body {
+        background-color: darkslategrey;
+    }
+
+    h1 {
+        font-family: serif;
+        font-size: 5rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        background-color: darksalmon;
+    }
+
+    h1 {
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 7rem;
+    }
+}
+
+@media screen and (max-width: 480p) {
+    body {
+        background-color: cornflowerblue;
+    }
+
+    h1 {
+        font-family:'Times New Roman', Times, serif;
+        font-size: 1rem;
+    }
+}
